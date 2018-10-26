@@ -1,0 +1,44 @@
+
+public class APCS {
+
+	public static void main(String[] args) {
+		int segment = 5;
+		int height = 5;
+		Trees(segment, height);
+	}
+
+	public static void Trees(int segment, int height) {
+		int f = 10;
+		for (int a = 1; a <= segment*2; a+=2) { //6: (1, 3, 5)
+			int b = a;
+			f--;
+			for (int c = 1; c <= height; b+=2) { //8: (1, 3, 5, 7), (3, 5, 7), (5, 7)	
+				
+				for (int e = f; e > c; e--) {
+					System.out.print(" ");
+				}
+				for (int d = 1; d <= b; d++) {
+					System.out.print("*");
+				}
+				System.out.print("\n");
+				c++;
+			}
+		}
+		
+		for (int y = 1; y <= 2; y++) {
+			for (int e = 10; e > 2; e--) {
+				System.out.print(" ");
+			}
+			System.out.println("*");
+		}
+		
+		for (int e = 10; e > 5; e--) {
+			System.out.print(" ");
+		}
+		for (int z = 1; z <= 7; z++) {
+			
+			System.out.print("*");
+		}
+		
+	}
+}
